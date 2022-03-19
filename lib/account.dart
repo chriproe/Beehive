@@ -49,13 +49,13 @@ class _MyAccountWidgetState extends State<MyAccountWidget> {
       body: ListView(
         physics: BouncingScrollPhysics(),
         children: [
-          ProfileWidget(
-            imagePath: user.imagePath,
-            onClicked: () async {},
+          // ProfileWidget(
+          //   imagePath: user.imagePath,
+          //   onClicked: () async {},
 
-          )
+         // )
         ],
-        ),)
+        ),//)
     );
   }
 

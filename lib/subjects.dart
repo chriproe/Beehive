@@ -1,43 +1,22 @@
+import 'package:beehive/main.dart';
 import 'package:flutter/material.dart';
-import 'package:beehive/screens/home/home.dart';
 import 'package:beehive/account.dart';
-import 'package:beehive/widgets/navdrawer.dart';
 
-void main() => runApp(beehive());
 
-class beehive extends StatelessWidget {
+class SubjectWidget extends StatefulWidget {
+  const SubjectWidget({Key? key}) : super(key: key);
+
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      //debugShowCheckedModeBanner: false,
-      title: 'beehive',
-      home: MenuWidget(),
-    );
+  State<StatefulWidget> createState() => _SubjectWidgetState();
   }
-} 
 
-class MenuWidget extends StatefulWidget {
-  const MenuWidget({Key? key}) : super(key: key);
-
-  @override
-  State<StatefulWidget> createState() => _MenuWidgetState();
-
-}
-
-class _MenuWidgetState extends State<MenuWidget>{
+class _SubjectWidgetState extends State<SubjectWidget> {
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-      drawer: NavDrawer(),
       appBar: AppBar(
         backgroundColor: Colors.orange,
-        // leading: IconButton(
-        //   icon: const Icon(Icons.menu),
-        //   onPressed: () {},
-        //   tooltip: 'Menu',
-        //   ),
-          title: const Text('beehive'),
+          title: const Text('Συγγράμματα'),
           actions: [
             IconButton(
               onPressed: () {
@@ -67,9 +46,11 @@ class _MenuWidgetState extends State<MenuWidget>{
         ),
 
 
-      ),
-
+      ),      
     );
+
   }
 
 }
+
+
