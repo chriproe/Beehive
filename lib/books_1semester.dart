@@ -1,23 +1,22 @@
-
 import 'package:beehive/main.dart';
 import 'package:flutter/material.dart';
 import 'package:beehive/account.dart';
-import 'package:beehive/books_1semester.dart';
+import 'package:beehive/analysis_1books.dart';
 
-class BooksWidget extends StatefulWidget {
-  const BooksWidget({Key? key}) : super(key: key);
+class Books_Semester1Widget extends StatefulWidget {
+  const Books_Semester1Widget({Key? key}) : super(key: key);
 
   @override
-  State<StatefulWidget> createState() => _BooksWidgetState();
+  State<StatefulWidget> createState() => _Books_Semester1WidgetState();
   }
 
-class _BooksWidgetState extends State<BooksWidget> {
+class _Books_Semester1WidgetState extends State<Books_Semester1Widget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.deepOrange[800],
-          title: const Text('Συγγράμματα'),
+          title: const Text('Συγγράμματα 1ου Εξαμήνου'),
           actions: [
             IconButton(
               onPressed: () {
@@ -47,7 +46,8 @@ class _BooksWidgetState extends State<BooksWidget> {
         ),
 
 
-      ),      body: ListView(
+      ),      
+      body: ListView(
         children :[
           const SizedBox(
             height: 24,
@@ -57,7 +57,7 @@ class _BooksWidgetState extends State<BooksWidget> {
               ),
             )),
           buildMenuItem(
-            text: 'Εξάμηνο 1ο',
+            text: 'Ανάλυση 1',
             icon: Icons.favorite,
             onClicked: () => selectedItem(context, 0),
           ),
@@ -69,7 +69,7 @@ class _BooksWidgetState extends State<BooksWidget> {
               borderRadius: BorderRadius.circular(10),
               ))),
           buildMenuItem(
-            text: 'Εξάμηνο 2ο',
+            text: 'Λογική Σχεδίαση',
             icon: Icons.favorite,
             onClicked: () => selectedItem(context, 0),
           ),
@@ -119,32 +119,31 @@ class _BooksWidgetState extends State<BooksWidget> {
       ),
     );
 
-  }
-
 }
+ Widget buildMenuItem({
+      required String text,
+      required IconData icon,
+      VoidCallback? onClicked,
+    }) {
+      final color = Colors.white;
+      final hoverColor = Colors.white70;
 
-  Widget buildMenuItem({
-    required String text,
-    required IconData icon,
-    VoidCallback? onClicked,
-  }) {
-    final color = Colors.white;
-    final hoverColor = Colors.white70;
+      return ListTile(
+        leading: Icon(icon, color: Colors.green[900]),
+        title: Text(text, style: TextStyle(color: Colors.green[900])),
+        hoverColor: hoverColor,
+        onTap: onClicked,
+      );
+    }
 
-    return ListTile(
-      leading: Icon(icon, color: Colors.green[900]),
-      title: Text(text, style: TextStyle(color: Colors.green[900])),
-      hoverColor: hoverColor,
-      onTap: onClicked,
-    );
-  }
 
-  void selectedItem(BuildContext context, int index) {
-    switch (index) {
-      case 0:
-        Navigator.of(context).push(MaterialPageRoute(
-        builder: (context) => Books_Semester1Widget(),
-        ));    
-        break;
-  }
+    void selectedItem(BuildContext context, int index) {
+      switch (index) {
+        case 0:
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => Analysi_1BooksWidget(),
+          ));
+          break;
+      }
+    }
 }

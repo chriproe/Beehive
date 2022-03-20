@@ -27,8 +27,8 @@ class SearchDrawerWidget extends StatelessWidget {
                   buildMenuItem(
                       text: 'Back',
                       icon: Icons.arrow_back,
+                      onClicked: () => selectedItem(context, 0),
                     ),
-
                 ],
               ),
             ),
@@ -115,9 +115,7 @@ class SearchDrawerWidget extends StatelessWidget {
 
     switch (index) {
       case 0:
-        Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => SubjectWidget(),
-        ));
+       Navigator.of(context).pop();
         break;
       case 1:
         Navigator.of(context).push(MaterialPageRoute(
