@@ -1,40 +1,22 @@
-import 'package:beehive/searchdrawer.dart';
+
+import 'package:beehive/main.dart';
 import 'package:flutter/material.dart';
-import 'package:beehive/screens/home/home.dart';
 import 'package:beehive/account.dart';
-import 'package:beehive/widgets/navdrawer.dart';
 
-void main() => runApp(beehive());
+class AdviceWidget extends StatefulWidget {
+  const AdviceWidget({Key? key}) : super(key: key);
 
-class beehive extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      //debugShowCheckedModeBanner: false,
-      title: 'beehive',
-      home: MenuWidget(),
-    );
+  State<StatefulWidget> createState() => _AdviceWidgetState();
   }
-} 
 
-class MenuWidget extends StatefulWidget {
-  const MenuWidget({Key? key}) : super(key: key);
-
-  @override
-  State<StatefulWidget> createState() => _MenuWidgetState();
-
-}
-
-class _MenuWidgetState extends State<MenuWidget>{
+class _AdviceWidgetState extends State<AdviceWidget> {
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-      drawer: NavigationDrawerWidget(),
-      endDrawer: SearchDrawerWidget(),
       appBar: AppBar(
         backgroundColor: Colors.deepOrange[800],
-          title: const Text('beehive'),
+          title: const Text('Συμβουλές Διαβάσματος'),
           actions: [
             IconButton(
               onPressed: () {
@@ -47,11 +29,7 @@ class _MenuWidgetState extends State<MenuWidget>{
               tooltip: 'Account',
               ),
             IconButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => SearchDrawerWidget())
-                );
-              },
+              onPressed: () {}, 
               icon: Image.asset('assets/images/honey-dipper.png'),
               tooltip: 'Search',
               ),
@@ -68,9 +46,9 @@ class _MenuWidgetState extends State<MenuWidget>{
         ),
 
 
-      ),
-
+      ),      
     );
+
   }
 
 }

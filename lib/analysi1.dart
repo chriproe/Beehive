@@ -1,23 +1,21 @@
 import 'package:beehive/main.dart';
 import 'package:flutter/material.dart';
 import 'package:beehive/account.dart';
-import 'package:beehive/semester.dart';
 
-
-class SubjectWidget extends StatefulWidget {
-  const SubjectWidget({Key? key}) : super(key: key);
+class Analysi1Widget extends StatefulWidget {
+  const Analysi1Widget({Key? key}) : super(key: key);
 
   @override
-  State<StatefulWidget> createState() => _SubjectWidgetState();
+  State<StatefulWidget> createState() => _Analysi1WidgetState();
   }
 
-class _SubjectWidgetState extends State<SubjectWidget> {
+class _Analysi1WidgetState extends State<Analysi1Widget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.deepOrange[800],
-          title: const Text('Μαθήματα'),
+          title: const Text('Ανάλυση Ι'),
           actions: [
             IconButton(
               onPressed: () {
@@ -45,7 +43,9 @@ class _SubjectWidgetState extends State<SubjectWidget> {
             IconButton(onPressed: () {} , icon: const Icon (null))
           ],
         ),
-      ), 
+
+
+      ),      
       body: ListView(
         children :[
           const SizedBox(
@@ -56,7 +56,7 @@ class _SubjectWidgetState extends State<SubjectWidget> {
               ),
             )),
           buildMenuItem(
-            text: 'Εξάμηνο 1ο',
+            text: 'Ανάλυση 1',
             icon: Icons.favorite,
             onClicked: () => selectedItem(context, 0),
           ),
@@ -68,7 +68,7 @@ class _SubjectWidgetState extends State<SubjectWidget> {
               borderRadius: BorderRadius.circular(10),
               ))),
           buildMenuItem(
-            text: 'Εξάμηνο 2ο',
+            text: 'Λογική Σχεδίαση',
             icon: Icons.favorite,
             onClicked: () => selectedItem(context, 0),
           ),
@@ -117,14 +117,8 @@ class _SubjectWidgetState extends State<SubjectWidget> {
         ],
       ),
     );
-          // const SizedBox(height: 16),
-          // buildMenuItem(
-          //   text: "Εξάμηνo 1",
-          //   icon: Icons.favorite,
-          // ),
-  }
 
-
+}
  Widget buildMenuItem({
       required String text,
       required IconData icon,
@@ -146,10 +140,9 @@ class _SubjectWidgetState extends State<SubjectWidget> {
       switch (index) {
         case 0:
           Navigator.of(context).push(MaterialPageRoute(
-            builder: (context) => Semester1Widget(),
+            builder: (context) => Analysi1Widget(),
           ));
           break;
       }
     }
 }
-
