@@ -7,7 +7,7 @@ class UserPreferences {
     'beehive/assets/images/bee.png',
     name: 'Aimilios Tomilo',
     email: 'redapple@gmail.com',
-    semester: 4,
+    semester: "4",
     about: 'blah blah blah'
   );
 }

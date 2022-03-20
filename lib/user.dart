@@ -2,7 +2,7 @@ class User {
   final String imagePath;
   final String name;
   final String email;
-  final int semester;
+  final String semester;
   final String about;
 
 
