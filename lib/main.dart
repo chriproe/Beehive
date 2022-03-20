@@ -49,7 +49,7 @@ class _MenuWidgetState extends State<MenuWidget>{
             IconButton(
               onPressed: () {
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => SearchDrawerWidget())
+                  MaterialPageRoute(builder: (context) => const SearchPage())
                 );
               },
               icon: Image.asset('assets/images/honey-dipper.png'),
@@ -72,5 +72,4 @@ class _MenuWidgetState extends State<MenuWidget>{
 
     );
   }
-
 }
