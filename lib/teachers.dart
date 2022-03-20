@@ -53,14 +53,8 @@ body: ListView(
             icon: Icons.tag_faces,
             onClicked: () => selectedItem(context, 0),
           ),
-          SizedBox(
-            height: 24,
-            child: DecoratedBox(
-              decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              ))),
-              const SizedBox(height: 24),
+          
+           const SizedBox(height: 24),
           buildMenuItem(
             text: 'Βασιλική Καντερέ',
             icon: Icons.tag_faces,

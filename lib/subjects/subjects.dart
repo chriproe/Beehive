@@ -49,6 +49,7 @@ class _SubjectWidgetState extends State<SubjectWidget> {
       ), 
       body: ListView(
         children :[
+          SizedBox(height: 24,),
           buildMenuItem(
             text: 'Εξάμηνο 1ο',
             icon: Icons.calendar_today_rounded,

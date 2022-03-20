@@ -55,7 +55,6 @@ class _Semester1WidgetState extends State<Semester1Widget> {
             onClicked: () => selectedItem(context, 0),
           ),
           SizedBox(
-            height: 24,
             child: DecoratedBox(
               decoration: BoxDecoration(
               color: Colors.white,
