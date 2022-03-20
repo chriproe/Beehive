@@ -3,20 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:beehive/account.dart';
 import 'package:beehive/strang_gilbert.dart';
 
-class Analysi_1BooksWidget extends StatefulWidget {
-  const Analysi_1BooksWidget({Key? key}) : super(key: key);
+class LogikiBooksWidget extends StatefulWidget {
+  const LogikiBooksWidget({Key? key}) : super(key: key);
 
   @override
-  State<StatefulWidget> createState() => _Analysi_1BooksWidgetState();
+  State<StatefulWidget> createState() => _LogikiBooksWidgetState();
   }
 
-class _Analysi_1BooksWidgetState extends State<Analysi_1BooksWidget> {
+class _LogikiBooksWidgetState extends State<LogikiBooksWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.deepOrange[800],
-          title: const Text('Συγγράμματα - Ανάλυση Ι'),
+          title: const Text('Συγγράμματα - Λογική Σχεδίαση Ψηφιακών Συστημάτων'),
           actions: [
             IconButton(
               onPressed: () {
@@ -50,7 +50,7 @@ class _Analysi_1BooksWidgetState extends State<Analysi_1BooksWidget> {
       body: ListView(
         children :[
           buildMenuItem(
-            text: 'Ανάλυση και Εφαρμογές',
+            text: 'Λογική Σχεδίαση Ψηφιακών Συστημάτων',
             icon: Icons.library_books_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
@@ -62,7 +62,7 @@ class _Analysi_1BooksWidgetState extends State<Analysi_1BooksWidget> {
               borderRadius: BorderRadius.circular(10),
               ))),
           buildMenuItem(
-            text: 'Ανάλυση |',
+            text: 'Ψηφιακή Ανάλυση',
             icon: Icons.library_books_rounded,
             onClicked: () => selectedItem(context, 0),
           ),

@@ -2,6 +2,7 @@ import 'package:beehive/main.dart';
 import 'package:flutter/material.dart';
 import 'package:beehive/account.dart';
 import 'package:beehive/analysis_1books.dart';
+import 'package:beehive/logiki_books.dart';
 
 class Books_Semester1Widget extends StatefulWidget {
   const Books_Semester1Widget({Key? key}) : super(key: key);
@@ -49,16 +50,33 @@ class _Books_Semester1WidgetState extends State<Books_Semester1Widget> {
       ),      
       body: ListView(
         children :[
-          const SizedBox(
-            height: 24,
-            child: const DecoratedBox(
-              decoration: const BoxDecoration(
-                color: Colors.red
-              ),
-            )),
           buildMenuItem(
             text: 'Ανάλυση 1',
-            icon: Icons.favorite,
+            icon: Icons.arrow_right_rounded,
+            onClicked: () => selectedItem(context, 0),
+          ),
+          SizedBox(
+            height: 24,
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+              ))),
+          buildMenuItem(
+            text: 'Γραμμική Άλγεβρα',
+            icon: Icons.arrow_right_rounded,
+            onClicked: () => selectedItem(context, 0),
+          ),
+          SizedBox(
+            height: 24,
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+              ))),
+          buildMenuItem(
+            text: 'Προγραμματισμός Η/Υ',
+            icon: Icons.arrow_right_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
           SizedBox(
@@ -70,51 +88,93 @@ class _Books_Semester1WidgetState extends State<Books_Semester1Widget> {
               ))),
           buildMenuItem(
             text: 'Λογική Σχεδίαση',
-            icon: Icons.favorite,
-            onClicked: () => selectedItem(context, 0),
+            icon: Icons.arrow_right_rounded,
+            onClicked: () => selectedItem(context, 1),
           ),
-          const SizedBox(height: 24),
+          SizedBox(
+            height: 24,
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+              ))),
           buildMenuItem(
-            text: 'Εξάμηνο 3ο',
-            icon: Icons.favorite,
+            text: 'Φυσική |',
+            icon: Icons.arrow_right_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
-          const SizedBox(height: 24),
+          SizedBox(
+            height: 24,
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+              ))),
           buildMenuItem(
-            text: 'Εξάμηνο 4ο',
-            icon: Icons.favorite,
+            text: 'Ιστορία και Φιλοσοφία των Επιστημονικών Ιδεών',
+            icon: Icons.arrow_right_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
-          const SizedBox(height: 24),
+          SizedBox(
+            height: 24,
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+              ))),
           buildMenuItem(
-            text: 'Εξάμηνο 5ο',
-            icon: Icons.favorite,
+            text: 'Φιλοσοφία',
+            icon: Icons.arrow_right_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
-          const SizedBox(height: 24),
-          buildMenuItem(
-            text: 'Εξάμηνο 6ο',
-            icon: Icons.favorite,
-            onClicked: () => selectedItem(context, 0),
-          ),
-          const SizedBox(height: 24),
-          buildMenuItem(
-            text: 'Εξάμηνο 7ο',
-            icon: Icons.favorite,
-            onClicked: () => selectedItem(context, 0),
-          ),
-          const SizedBox(height: 24),
-          buildMenuItem(
-            text: 'Εξάμηνο 8ο',
-            icon: Icons.favorite,
-            onClicked: () => selectedItem(context, 0),
-          ),
-          const SizedBox(height: 24),
-          buildMenuItem(
-            text: 'Εξάμηνο 9ο',
-            icon: Icons.favorite,
-            onClicked: () => selectedItem(context, 0),
-          ),
+          // const SizedBox(height: 24),
+          // buildMenuItem(
+          //   text: 'Εξάμηνο 2ο',
+          //   icon: Icons.favorite,
+          //   onClicked: () => selectedItem(context, 0),
+          // ),
+          // const SizedBox(height: 24),
+          // buildMenuItem(
+          //   text: 'Εξάμηνο 3ο',
+          //   icon: Icons.favorite,
+          //   onClicked: () => selectedItem(context, 0),
+          // ),
+          // const SizedBox(height: 24),
+          // buildMenuItem(
+          //   text: 'Εξάμηνο 4ο',
+          //   icon: Icons.favorite,
+          //   onClicked: () => selectedItem(context, 0),
+          // ),
+          // const SizedBox(height: 24),
+          // buildMenuItem(
+          //   text: 'Εξάμηνο 5ο',
+          //   icon: Icons.favorite,
+          //   onClicked: () => selectedItem(context, 0),
+          // ),
+          // const SizedBox(height: 24),
+          // buildMenuItem(
+          //   text: 'Εξάμηνο 6ο',
+          //   icon: Icons.favorite,
+          //   onClicked: () => selectedItem(context, 0),
+          // ),
+          // const SizedBox(height: 24),
+          // buildMenuItem(
+          //   text: 'Εξάμηνο 7ο',
+          //   icon: Icons.favorite,
+          //   onClicked: () => selectedItem(context, 0),
+          // ),
+          // const SizedBox(height: 24),
+          // buildMenuItem(
+          //   text: 'Εξάμηνο 8ο',
+          //   icon: Icons.favorite,
+          //   onClicked: () => selectedItem(context, 0),
+          // ),
+          // const SizedBox(height: 24),
+          // buildMenuItem(
+          //   text: 'Εξάμηνο 9ο',
+          //   icon: Icons.favorite,
+          //   onClicked: () => selectedItem(context, 0),
+          // ),
         ],
       ),
     );
@@ -142,6 +202,11 @@ class _Books_Semester1WidgetState extends State<Books_Semester1Widget> {
         case 0:
           Navigator.of(context).push(MaterialPageRoute(
             builder: (context) => Analysi_1BooksWidget(),
+          ));
+          break;
+        case 1:
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => LogikiBooksWidget(),
           ));
           break;
       }

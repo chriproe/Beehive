@@ -47,18 +47,11 @@ class _Semester1WidgetState extends State<Semester1Widget> {
 
 
       ),      
-      body: ListView(
+ body: ListView(
         children :[
-          const SizedBox(
-            height: 24,
-            child: const DecoratedBox(
-              decoration: const BoxDecoration(
-                color: Colors.red
-              ),
-            )),
           buildMenuItem(
-            text: 'Ανάλυση 1',
-            icon: Icons.favorite,
+            text: 'Εξάμηνο 1ο',
+            icon: Icons.calendar_month_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
           SizedBox(
@@ -69,50 +62,50 @@ class _Semester1WidgetState extends State<Semester1Widget> {
               borderRadius: BorderRadius.circular(10),
               ))),
           buildMenuItem(
-            text: 'Λογική Σχεδίαση',
-            icon: Icons.favorite,
+            text: 'Εξάμηνο 2ο',
+            icon: Icons.calendar_month_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
           const SizedBox(height: 24),
           buildMenuItem(
             text: 'Εξάμηνο 3ο',
-            icon: Icons.favorite,
+            icon: Icons.calendar_month_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
           const SizedBox(height: 24),
           buildMenuItem(
             text: 'Εξάμηνο 4ο',
-            icon: Icons.favorite,
+            icon: Icons.calendar_month_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
           const SizedBox(height: 24),
           buildMenuItem(
             text: 'Εξάμηνο 5ο',
-            icon: Icons.favorite,
+            icon: Icons.calendar_month_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
           const SizedBox(height: 24),
           buildMenuItem(
             text: 'Εξάμηνο 6ο',
-            icon: Icons.favorite,
+            icon: Icons.calendar_month_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
           const SizedBox(height: 24),
           buildMenuItem(
             text: 'Εξάμηνο 7ο',
-            icon: Icons.favorite,
+            icon: Icons.calendar_month_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
           const SizedBox(height: 24),
           buildMenuItem(
             text: 'Εξάμηνο 8ο',
-            icon: Icons.favorite,
+            icon: Icons.calendar_month_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
           const SizedBox(height: 24),
           buildMenuItem(
             text: 'Εξάμηνο 9ο',
-            icon: Icons.favorite,
+            icon: Icons.calendar_month_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
         ],
