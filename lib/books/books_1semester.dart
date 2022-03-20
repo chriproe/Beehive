@@ -1,8 +1,8 @@
 import 'package:beehive/main.dart';
 import 'package:flutter/material.dart';
 import 'package:beehive/account.dart';
-import 'package:beehive/analysis_1books.dart';
-import 'package:beehive/logiki_books.dart';
+import 'package:beehive/books/analysis_1books.dart';
+import 'package:beehive/books/logiki_books.dart';
 
 class Books_Semester1Widget extends StatefulWidget {
   const Books_Semester1Widget({Key? key}) : super(key: key);

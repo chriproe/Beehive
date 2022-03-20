@@ -1,10 +1,10 @@
   import 'package:beehive/account.dart';
   import 'package:flutter/material.dart';
   import 'package:beehive/main.dart';
-  import 'package:beehive/subjects.dart';
+  import 'package:beehive/subjects/subjects.dart';
   import 'package:beehive/teachers.dart';
   import 'package:beehive/advice.dart';
-  import 'package:beehive/books.dart';
+  import 'package:beehive/books/books.dart';
 
   class NavigationDrawerWidget extends StatelessWidget {
     final padding = EdgeInsets.symmetric(horizontal: 20);
