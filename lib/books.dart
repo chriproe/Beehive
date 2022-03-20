@@ -49,70 +49,56 @@ class _BooksWidgetState extends State<BooksWidget> {
 
       ),      body: ListView(
         children :[
-          const SizedBox(
-            height: 24,
-            child: const DecoratedBox(
-              decoration: const BoxDecoration(
-                color: Colors.red
-              ),
-            )),
           buildMenuItem(
             text: 'Εξάμηνο 1ο',
-            icon: Icons.favorite,
+            icon: Icons.calendar_today_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
-          SizedBox(
-            height: 24,
-            child: DecoratedBox(
-              decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              ))),
           buildMenuItem(
             text: 'Εξάμηνο 2ο',
-            icon: Icons.favorite,
+            icon: Icons.calendar_today_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
           const SizedBox(height: 24),
           buildMenuItem(
             text: 'Εξάμηνο 3ο',
-            icon: Icons.favorite,
+            icon: Icons.calendar_today_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
           const SizedBox(height: 24),
           buildMenuItem(
             text: 'Εξάμηνο 4ο',
-            icon: Icons.favorite,
+            icon: Icons.calendar_today_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
           const SizedBox(height: 24),
           buildMenuItem(
             text: 'Εξάμηνο 5ο',
-            icon: Icons.favorite,
+            icon: Icons.calendar_today_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
           const SizedBox(height: 24),
           buildMenuItem(
             text: 'Εξάμηνο 6ο',
-            icon: Icons.favorite,
+            icon: Icons.calendar_today_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
           const SizedBox(height: 24),
           buildMenuItem(
             text: 'Εξάμηνο 7ο',
-            icon: Icons.favorite,
+            icon: Icons.calendar_today_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
           const SizedBox(height: 24),
           buildMenuItem(
             text: 'Εξάμηνο 8ο',
-            icon: Icons.favorite,
+            icon: Icons.calendar_today_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
           const SizedBox(height: 24),
           buildMenuItem(
             text: 'Εξάμηνο 9ο',
-            icon: Icons.favorite,
+            icon: Icons.calendar_today_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
         ],
