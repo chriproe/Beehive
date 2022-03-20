@@ -1,10 +1,13 @@
-  import 'package:beehive/account.dart';
+  import 'dart:io';
+import 'package:beehive/account.dart';
+import 'package:english_words/english_words.dart';
   import 'package:flutter/material.dart';
   import 'package:beehive/main.dart';
   import 'package:beehive/subjects/subjects.dart';
   import 'package:beehive/teachers.dart';
   import 'package:beehive/advice.dart';
   import 'package:beehive/books/books.dart';
+  import 'package:beehive/widgets/searchbar.dart';
 
   class NavigationDrawerWidget extends StatelessWidget {
     final padding = EdgeInsets.symmetric(horizontal: 20);
@@ -65,8 +68,6 @@
                       icon: Icons.account_tree_outlined,
                       onClicked: () => selectedItem(context, 4),
                     ),
-                  
-
                   ],
                 ),
               ),
@@ -175,3 +176,63 @@
       }
     }
   }
+
+class SearchPage extends StatefulWidget {
+  const SearchPage({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  State<SearchPage> createState() => _SearchPageState();
+}
+
+class _SearchPageState extends State<SearchPage> {
+  String query = '';
+  late List<String> results;
+
+  @override
+  void initState() {
+    super.initState();
+    results = allcomp;
+  }
+
+  void search(String query) {
+    final results = allcomp.where((str) {
+      final strLower = str.toLowerCase();
+      final searchLower = query.toLowerCase();
+      return strLower.contains(searchLower);
+    }).toList();
+
+    setState(() {
+      this.query = query;
+      this.results = results;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) => Scaffold( 
+    body: 
+     Padding(
+        padding: const EdgeInsets.all(25.0),
+        child: Column(
+          children: <Widget>[
+            SearchBar(text: query, onChanged: search, hintText: 'Search'),
+            Expanded(
+              child: ListView.builder(
+                  itemCount: results.length,
+                  itemBuilder: (context, index) {
+                    return buildMenuItem(
+                      text: allcomp[index],
+                      icon: Icons.arrow_back_rounded);
+                  }),
+            )
+          ],
+        ),
+      )
+  );
+}
+
+final List<String> allcomp = ["Ανάλυση |", "Λογική Σχεδίαση Ψηφιακών Συστημάτων", "Φυσική |", "Προγραμματισμός Η/Υ", 
+                              "Φιλοσοφία", "Ιστορία και Φιλοσοφία των Επιστημονικών Ιδεών", 
+                              "Γραμμική Άλγεβρα", "Ψηφιακή Ανάλυση", "Κωνσταντίνα Νικήτα", 
+                              "Γεώργιος Φικιώρης", "Κωστής Σαγώνας", "Ιωάννα Ρουσσάκη"];
