@@ -36,19 +36,19 @@
                     const SizedBox(height: 24),
                     buildMenuItem(
                       text: 'Μαθήματα',
-                      icon: Icons.people,
+                      icon: Icons.science,
                       onClicked: () => selectedItem(context, 0),
                     ),
                     const SizedBox(height: 16),
                     buildMenuItem(
                       text: 'Καθηγητές',
-                      icon: Icons.favorite_border,
+                      icon: Icons.people,
                       onClicked: () => selectedItem(context, 1),
                     ),
                     const SizedBox(height: 16),
                     buildMenuItem(
                       text: 'Συγγράμματα',
-                      icon: Icons.workspaces_outline,
+                      icon: Icons.book_sharp,
                       onClicked: () => selectedItem(context, 2),
                     ),
                     const SizedBox(height: 16),
@@ -62,7 +62,7 @@
                     const SizedBox(height: 24),
                     buildMenuItem(
                       text: 'Αποσύνδεση/Logout',
-                      icon: Icons.account_tree_outlined,
+                      icon: Icons.logout,
                       onClicked: () => selectedItem(context, 4),
                     ),
                   

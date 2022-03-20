@@ -51,7 +51,7 @@ class _Semester1WidgetState extends State<Semester1Widget> {
         children :[
           buildMenuItem(
             text: 'Εξάμηνο 1ο',
-            icon: Icons.calendar_month_rounded,
+            icon: Icons.calendar_today_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
           SizedBox(
@@ -63,49 +63,49 @@ class _Semester1WidgetState extends State<Semester1Widget> {
               ))),
           buildMenuItem(
             text: 'Εξάμηνο 2ο',
-            icon: Icons.calendar_month_rounded,
+            icon: Icons.calendar_today_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
           const SizedBox(height: 24),
           buildMenuItem(
             text: 'Εξάμηνο 3ο',
-            icon: Icons.calendar_month_rounded,
+            icon: Icons.calendar_today_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
           const SizedBox(height: 24),
           buildMenuItem(
             text: 'Εξάμηνο 4ο',
-            icon: Icons.calendar_month_rounded,
+            icon: Icons.calendar_today_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
           const SizedBox(height: 24),
           buildMenuItem(
             text: 'Εξάμηνο 5ο',
-            icon: Icons.calendar_month_rounded,
+            icon: Icons.calendar_today_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
           const SizedBox(height: 24),
           buildMenuItem(
             text: 'Εξάμηνο 6ο',
-            icon: Icons.calendar_month_rounded,
+            icon: Icons.calendar_today_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
           const SizedBox(height: 24),
           buildMenuItem(
             text: 'Εξάμηνο 7ο',
-            icon: Icons.calendar_month_rounded,
+            icon: Icons.calendar_today_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
           const SizedBox(height: 24),
           buildMenuItem(
             text: 'Εξάμηνο 8ο',
-            icon: Icons.calendar_month_rounded,
+            icon: Icons.calendar_today_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
           const SizedBox(height: 24),
           buildMenuItem(
             text: 'Εξάμηνο 9ο',
-            icon: Icons.calendar_month_rounded,
+            icon: Icons.calendar_today_rounded,
             onClicked: () => selectedItem(context, 0),
           ),
         ],
